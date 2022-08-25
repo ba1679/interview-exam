@@ -1,5 +1,17 @@
 {
   "common": {
-    "bannerTitle": "Social media shared today, tomorrow or by location"
+    "bannerTitle": "Social media shared today, tomorrow or by location",
+    "email": "Email",
+    "password": "Password"
+  },
+  "login": {
+    "title": "Login",
+    "remamberMe": "Remeber me",
+    "forgotPassword": "Forgot Password",
+    "google": "Login with google",
+    "dontHaveAccount": "Don’t have an account?"
+  },
+  "signup": {
+    "title": "Sign up"
   }
 }

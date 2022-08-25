@@ -1,5 +1,17 @@
 {
   "common": {
-    "bannerTitle": "Social media shared today, tomorrow or by location"
+    "bannerTitle": "Social media shared today, tomorrow or by location",
+    "email": "電子信箱",
+    "password": "密碼"
+  },
+  "login": {
+    "title": "登入",
+    "remamberMe": "記住我",
+    "forgotPassword": "忘記密碼",
+    "google": "使用 google 登入",
+    "dontHaveAccount": "還沒有帳號嗎？"
+  },
+  "signup": {
+    "title": "註冊"
   }
 }

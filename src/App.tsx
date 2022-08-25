@@ -1,12 +1,17 @@
-import React from 'react';
-import './App.css';
+import React, { lazy } from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import 'i18n';
 
-function App() {
+const Login = lazy(() => import('./pages/Login'));
+
+const App = () => {
   return (
-    <div className="App">
-      
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path='/login' element={<Login />}></Route>
+      </Routes>
+    </BrowserRouter>
   );
-}
+};
 
 export default App;
