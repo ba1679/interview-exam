@@ -1,0 +1,10 @@
+// Override default variables before the import
+@import '~bootstrap/scss/functions';
+// custom variables
+@import './helpers/variables';
+@import '~bootstrap/scss/mixins';
+
+// Import Bootstrap and its default variables
+@import '~bootstrap/scss/bootstrap.scss';
+
+@import './helpers/custom_bootstrap';
