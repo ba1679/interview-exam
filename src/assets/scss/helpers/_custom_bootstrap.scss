@@ -1,4 +1,28 @@
+a {
+  text-decoration: none;
+}
+
 .btn-primary,
-.btn-primary:hover {
+.btn-primary:hover,
+.btn-primary:active,
+.btn-primary:focus {
   color: $white;
+}
+
+.btn:disabled {
+  color: $white;
+  cursor: not-allowed;
+}
+
+.form-label {
+  font-size: 14px;
+}
+
+.form-control {
+  border-radius: 5px;
+  border-color: #d1d1d1;
+  &:focus {
+    border-color: #007aff;
+    box-shadow: none;
+  }
 }

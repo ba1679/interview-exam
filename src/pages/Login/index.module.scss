@@ -1,0 +1,45 @@
+@import 'assets/scss/helpers/variables';
+
+.login {
+  margin-top: 37px;
+}
+
+.loginTitle {
+  font-size: 28px;
+  font-weight: 600;
+}
+
+.formTitle {
+  margin-bottom: 37px;
+  small {
+    font-size: 14px;
+  }
+}
+
+.loginForm {
+  font-size: 14px;
+  input.invalid {
+    border-color: $danger;
+    &:focus {
+      border-color: $danger;
+    }
+  }
+}
+
+.actionBtns {
+  button {
+    width: 100%;
+    font-weight: 600;
+    padding: 14px 0;
+    &:first-child {
+      margin-bottom: 10px;
+    }
+  }
+  @media (min-width: 1920px) {
+    display: flex;
+    gap: 32px;
+    button:first-child {
+      margin-bottom: 0;
+    }
+  }
+}
