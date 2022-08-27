@@ -1,23 +1,26 @@
 @import '../../assets/scss/helpers/variables';
 
 .leftBanner {
-  position: relative;
-  width: 40%;
-  padding: 40px 66px 85px;
-  background-color: $primary;
-  color: #ffffff;
-  z-index: 1;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  display: none;
   h1 {
     font-size: 28px;
     font-weight: 600;
     text-align: center;
-    margin-bottom: 60px;
+    margin-bottom: 56px;
   }
-  @media (min-width: 1367px) {
+  @media (min-width: 1920px) {
     padding: 64px 110px 118px;
+  }
+  @media (min-width: 769px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    width: 40%;
+    padding: 40px 66px 85px;
+    background-color: $primary;
+    color: #ffffff;
+    z-index: 1;
   }
 }
 
@@ -31,28 +34,51 @@
   transform: translate(-50%, -50%);
   background: linear-gradient(324.93deg, #0f70da 0.74%, #007aff 100%);
   z-index: -1;
+  @media (min-width: 1920px) {
+    width: 593px;
+    height: 593px;
+  }
 }
 
 .firstIphone {
   width: 277px;
   height: 524px;
-  z-index: 1;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   img {
     width: 100%;
   }
-  @media (min-width: 1367px) {
+  @media (min-width: 1920px) {
     width: 332px;
     height: 630px;
   }
 }
 
+.backIphone {
+  width: 212px;
+  height: 403px;
+  img {
+    width: 100%;
+  }
+  @media (min-width: 1920px) {
+    width: 255px;
+    height: 485px;
+  }
+}
+
 .rightForm {
-  width: 60%;
-  padding: 40px 111px 24px 56px;
+  width: 100%;
+  padding: 20px;
   display: flex;
   flex-direction: column;
-  @media (min-width: 1367px) {
+  @media (min-width: 1920px) {
     padding: 64px 192px 32px 162px;
+  }
+  @media (min-width: 769px) {
+    width: 60%;
+    padding: 40px 111px 24px 56px;
   }
 }
 

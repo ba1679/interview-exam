@@ -15,8 +15,18 @@ const Layout = ({ children }: { children: React.ReactElement }) => {
       <div className={styles.leftBanner}>
         <div className={styles.circleBg}></div>
         <h1>{t('common.bannerTitle')}</h1>
-        <div className={styles.firstIphone}>
-          <img src={IphoneImg} alt='iphone' />
+        <div>
+          <div className='d-flex'>
+            <div className={styles.backIphone}>
+              <img src={IphoneImg} alt='iphone' />
+            </div>
+            <div className={styles.backIphone}>
+              <img src={IphoneImg} alt='iphone' />
+            </div>
+          </div>
+          <div className={styles.firstIphone}>
+            <img src={IphoneImg} alt='iphone' />
+          </div>
         </div>
       </div>
       <div className={styles.rightForm}>
