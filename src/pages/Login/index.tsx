@@ -4,19 +4,19 @@ import { useTranslation } from 'react-i18next';
 import { Button, Form, Spinner } from 'react-bootstrap';
 import { useForm } from 'react-hook-form';
 import { Link, useNavigate } from 'react-router-dom';
-import { login } from 'services/firebase';
+import { login, signInWighGoogle } from 'services/firebase';
 import Layout from 'components/layout';
 import useStorage from 'hooks/useStorage';
 import { TloginForm } from 'types';
 import { AuthContext } from 'App';
-import { ReactComponent as GoogleIcon } from 'assets/images/icons/google.svg';
+import googleIcon from 'assets/images/icons/google.png';
 
 import styles from './index.module.scss';
 
 const Login = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [loginErrorMsg, setLoginErrorMsg] = useState<string | null>(null);
-  const { auth, setAuth } = useContext(AuthContext);
+  const { auth } = useContext(AuthContext);
   const [emailVal, setEmail, removeEmail] = useStorage<string>('email', '');
   const [passwordVal, setPassword, removePassword] = useStorage<string>('password', '');
 
@@ -46,11 +46,10 @@ const Login = () => {
       removePassword();
     }
     try {
-      const user = await login({
+      await login({
         email: data.email,
         password: data.password,
       });
-      setAuth(user);
     } catch (error) {
       if (error instanceof Error) {
         if (error.message.includes('user-not-found')) {
@@ -61,6 +60,16 @@ const Login = () => {
       }
     } finally {
       setIsLoading(false);
+    }
+  };
+
+  const handleSignInWithGoogle = async () => {
+    try {
+      await signInWighGoogle();
+    } catch (error) {
+      if (error instanceof Error) {
+        console.log(error.message);
+      }
     }
   };
 
@@ -115,15 +124,14 @@ const Login = () => {
               {t('login.title')}
               {isLoading && <Spinner animation='border' size='sm' className='ms-3' />}
             </Button>
-            <Button variant='secondary'>
-              <GoogleIcon className='me-2' />
+            <Button variant='secondary' onClick={handleSignInWithGoogle} disabled={isLoading}>
+              <img src={googleIcon} alt='google-icon' className='me-2' />
               {t('login.google')}
             </Button>
           </div>
         </Form>
         <div className='text-center mt-4 mt-xl-5'>
-          {t('login.dontHaveAccount')}
-          <Link to='/sign-up'>{t('signup.title')}</Link>
+          {t('login.dontHaveAccount')} <Link to='/sign-up'> {t('signUp.title')}</Link>
         </div>
       </div>
     </Layout>
