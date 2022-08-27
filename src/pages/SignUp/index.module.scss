@@ -1,0 +1,47 @@
+@import 'assets/scss/helpers/variables';
+
+.login {
+  margin-top: 37px;
+}
+
+.loginTitle {
+  font-size: 28px;
+  font-weight: 600;
+}
+
+.formTitle {
+  margin-bottom: 37px;
+  small {
+    font-size: 14px;
+  }
+}
+
+.loginForm {
+  font-size: 14px;
+  input.invalid {
+    border-color: $danger;
+    &:focus {
+      border-color: $danger;
+    }
+  }
+  small {
+    font-size: 12px;
+  }
+}
+
+.previewAvatar {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.actionBtns {
+  display: flex;
+  gap: 32px;
+  button {
+    width: 100%;
+    font-weight: 600;
+    padding: 14px 0;
+  }
+}

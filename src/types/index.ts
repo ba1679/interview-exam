@@ -3,6 +3,7 @@ export type TsignUpForm = {
   lastName: string;
   email: string;
   password: string;
+  photoURL?: string;
 };
 
 export type TloginForm = {
