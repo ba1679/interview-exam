@@ -6,8 +6,12 @@
 }
 
 .topBar {
-  margin-top: 50px;
-  margin-right: 50px;
+  margin-top: 25px;
+  margin-right: 25px;
+  @media (min-width: 769px) {
+    margin-top: 50px;
+    margin-right: 50px;
+  }
 }
 
 .signOutBtn {
@@ -32,13 +36,21 @@
   object-fit: cover;
 }
 
+.homeContainer {
+  height: calc(100vh - 110px);
+}
+
 .homeCircle {
-  width: 593px;
-  height: 593px;
+  width: 300px;
+  height: 300px;
   border-radius: 50%;
   background-image: linear-gradient(324.93deg, #0f70da 0.74%, #007aff 100%);
   color: #ffffff;
   display: flex;
   justify-content: center;
   align-items: center;
+  @media (min-width: 769px) {
+    width: 593px;
+    height: 593px;
+  }
 }

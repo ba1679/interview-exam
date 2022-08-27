@@ -20,7 +20,7 @@ const Home = () => {
           </Button>
         </div>
       </div>
-      <div className='d-flex justify-content-center align-items-center'>
+      <div className={clx('d-flex justify-content-center align-items-center', styles.homeContainer)}>
         <div className={styles.homeCircle}>{t('home.loginSuccessfully')}</div>
       </div>
     </div>
