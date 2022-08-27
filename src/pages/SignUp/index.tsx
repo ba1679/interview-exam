@@ -188,7 +188,7 @@ const SignUp = () => {
               </Form.Group>
             </Col>
           </Row>
-          <Row className='mb-5 align-items-center'>
+          <Row className='mb-3 align-items-center'>
             <Col>
               <input
                 className='d-none'
@@ -242,7 +242,7 @@ const SignUp = () => {
             </Button>
           </div>
         </Form>
-        <div className='text-center mt-4'>
+        <div className='text-center my-4'>
           {t('signUp.alreadyHaveAccount')}
           <Link to='/login' className='ps-1'>
             {t('login.title')}

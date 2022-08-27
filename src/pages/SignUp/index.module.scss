@@ -38,10 +38,14 @@
 
 .actionBtns {
   display: flex;
-  gap: 32px;
+  flex-direction: column;
+  gap: 10px;
   button {
     width: 100%;
     font-weight: 600;
     padding: 14px 0;
+  }
+  @media (min-width: 769px) {
+    gap: 32px;
   }
 }
