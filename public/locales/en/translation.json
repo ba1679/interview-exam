@@ -2,7 +2,8 @@
   "common": {
     "bannerTitle": "Social media shared today, tomorrow or by location",
     "email": "Email",
-    "password": "Password"
+    "password": "Password",
+    "signOut": "Sign out"
   },
   "login": {
     "title": "Login",
@@ -11,7 +12,24 @@
     "google": "Login with google",
     "dontHaveAccount": "Don’t have an account?"
   },
-  "signup": {
-    "title": "Sign up"
+  "signUp": {
+    "title": "Create account",
+    "firstName": "First name",
+    "lastName": "Last name",
+    "phoneNumber": "Phone number",
+    "confirmPassword": "Confirm password",
+    "alreadyHaveAccount": "Have an Account Already?",
+    "uploadAvatarImg": "Upload your profile photo"
+  },
+   "errorMsg": {
+    "email": "You have entered an invalid e-mail address.",
+    "password": "Password at least 6 letters",
+    "confirmPassword": "Those passwords didn't match. Please try again.",
+    "wrongPassword": "You have entered an invalid password.",
+    "userNotFound": "User not fonud, please sign up an account.",
+    "emailAlreadyExist": "Email already in use, please login directly"
+  },
+  "home": {
+    "loginSuccessfully": "Suceesfully! Welcome to Capzul!"
   }
 }
