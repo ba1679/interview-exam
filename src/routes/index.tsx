@@ -1,5 +1,5 @@
 import React, { lazy } from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { HashRouter, Routes, Route } from 'react-router-dom';
 import AuthRoutes from './authRoute';
 
 const Login = lazy(() => import('../pages/Login'));
@@ -8,7 +8,7 @@ const Home = lazy(() => import('../pages/Home'));
 
 const RouteComponent = () => {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <Routes>
         <Route path='/login' element={<Login />}></Route>
         <Route path='/sign-up' element={<SignUp />}></Route>
@@ -20,7 +20,7 @@ const RouteComponent = () => {
             </AuthRoutes>
           }></Route>
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   );
 };
 
