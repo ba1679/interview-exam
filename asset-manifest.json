@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/interview-exam/static/css/main.04529cd7.css",
-    "main.js": "/interview-exam/static/js/main.22756fff.js",
+    "main.js": "/interview-exam/static/js/main.418eac4a.js",
     "static/css/317.78cf2624.chunk.css": "/interview-exam/static/css/317.78cf2624.chunk.css",
     "static/js/317.592b7f44.chunk.js": "/interview-exam/static/js/317.592b7f44.chunk.js",
     "static/css/773.4f6c451b.chunk.css": "/interview-exam/static/css/773.4f6c451b.chunk.css",
@@ -16,7 +16,7 @@
     "static/media/google-play.svg": "/interview-exam/static/media/google-play.5b28929b8abc0553ebde9071841dc0f7.svg",
     "index.html": "/interview-exam/index.html",
     "main.04529cd7.css.map": "/interview-exam/static/css/main.04529cd7.css.map",
-    "main.22756fff.js.map": "/interview-exam/static/js/main.22756fff.js.map",
+    "main.418eac4a.js.map": "/interview-exam/static/js/main.418eac4a.js.map",
     "317.78cf2624.chunk.css.map": "/interview-exam/static/css/317.78cf2624.chunk.css.map",
     "317.592b7f44.chunk.js.map": "/interview-exam/static/js/317.592b7f44.chunk.js.map",
     "773.4f6c451b.chunk.css.map": "/interview-exam/static/css/773.4f6c451b.chunk.css.map",
@@ -28,6 +28,6 @@
   },
   "entrypoints": [
     "static/css/main.04529cd7.css",
-    "static/js/main.22756fff.js"
+    "static/js/main.418eac4a.js"
   ]
 }
