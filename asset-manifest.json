@@ -1,0 +1,33 @@
+{
+  "files": {
+    "main.css": "/static/css/main.04529cd7.css",
+    "main.js": "/static/js/main.6a1f721c.js",
+    "static/css/317.78cf2624.chunk.css": "/static/css/317.78cf2624.chunk.css",
+    "static/js/317.592b7f44.chunk.js": "/static/js/317.592b7f44.chunk.js",
+    "static/css/773.4f6c451b.chunk.css": "/static/css/773.4f6c451b.chunk.css",
+    "static/js/773.614b24de.chunk.js": "/static/js/773.614b24de.chunk.js",
+    "static/css/452.2a3fe8ca.chunk.css": "/static/css/452.2a3fe8ca.chunk.css",
+    "static/js/452.da73d2af.chunk.js": "/static/js/452.da73d2af.chunk.js",
+    "static/js/410.25aa1eeb.chunk.js": "/static/js/410.25aa1eeb.chunk.js",
+    "static/js/504.f9495ff8.chunk.js": "/static/js/504.f9495ff8.chunk.js",
+    "static/media/logo.svg": "/static/media/logo.2f126eb28ce568f3c06ab784415f8b57.svg",
+    "static/media/iphone.svg": "/static/media/iphone.5a8db4ae3457df334b109a36c0df133d.svg",
+    "static/media/app-store.svg": "/static/media/app-store.ec967e77d72e86394115bed48dd88f08.svg",
+    "static/media/google-play.svg": "/static/media/google-play.5b28929b8abc0553ebde9071841dc0f7.svg",
+    "index.html": "/index.html",
+    "main.04529cd7.css.map": "/static/css/main.04529cd7.css.map",
+    "main.6a1f721c.js.map": "/static/js/main.6a1f721c.js.map",
+    "317.78cf2624.chunk.css.map": "/static/css/317.78cf2624.chunk.css.map",
+    "317.592b7f44.chunk.js.map": "/static/js/317.592b7f44.chunk.js.map",
+    "773.4f6c451b.chunk.css.map": "/static/css/773.4f6c451b.chunk.css.map",
+    "773.614b24de.chunk.js.map": "/static/js/773.614b24de.chunk.js.map",
+    "452.2a3fe8ca.chunk.css.map": "/static/css/452.2a3fe8ca.chunk.css.map",
+    "452.da73d2af.chunk.js.map": "/static/js/452.da73d2af.chunk.js.map",
+    "410.25aa1eeb.chunk.js.map": "/static/js/410.25aa1eeb.chunk.js.map",
+    "504.f9495ff8.chunk.js.map": "/static/js/504.f9495ff8.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.04529cd7.css",
+    "static/js/main.6a1f721c.js"
+  ]
+}

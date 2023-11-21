@@ -1,0 +1,35 @@
+{
+  "common": {
+    "bannerTitle": "Social media shared today, tomorrow or by location",
+    "email": "電子信箱",
+    "password": "密碼",
+    "signOut": "登出"
+  },
+  "login": {
+    "title": "登入",
+    "remamberMe": "記住我",
+    "forgotPassword": "忘記密碼",
+    "google": "使用 google 登入",
+    "dontHaveAccount": "還沒有帳號嗎？"
+  },
+  "signUp": {
+    "title": "註冊",
+    "firstName": "名字",
+    "lastName": "姓氏",
+    "phoneNumber": "電話號碼",
+    "confirmPassword": "確認密碼",
+    "alreadyHaveAccount": "已經有帳號了嗎？",
+    "uploadAvatarImg": "上傳大頭照"
+  },
+  "errorMsg": {
+    "email": "電子信箱格式錯誤",
+    "password": "密碼至少需有 6 個字元",
+    "confirmPassword": "密碼不相符，請重新輸入",
+    "wrongPassword": "密碼錯誤",
+    "userNotFound": "用戶不存在，請先前往註冊頁面",
+    "emailAlreadyExist": "此 Email 已註冊過，請前往登入頁面"
+  },
+  "home": {
+    "loginSuccessfully": "登入成功，歡迎來到 Capzul!"
+  }
+}
