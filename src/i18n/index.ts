@@ -6,7 +6,8 @@ import { initReactI18next } from 'react-i18next';
 i18n
   .use(detector)
   .use(backend)
-  .use(initReactI18next).init({
+  .use(initReactI18next)
+  .init({
     fallbackLng: 'en',
     interpolation: {
       escapeValue: false,
@@ -16,6 +17,9 @@ i18n
     },
     react: {
       useSuspense: false,
+    },
+    backend: {
+      loadPath: '/interview-exam/locales/{{lng}}/translation.json',
     },
   });
 
