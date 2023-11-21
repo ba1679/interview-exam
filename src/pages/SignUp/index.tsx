@@ -7,7 +7,11 @@ import { useForm } from 'react-hook-form';
 import { ref, uploadBytes, getDownloadURL } from 'firebase/storage';
 import Layout from 'components/layout';
 import useStorage from 'hooks/useStorage';
-import { signInWighGoogle, signUpAndUpdateUserInfo, storage } from 'services/firebase';
+import {
+  signInWighGoogle,
+  signUpAndUpdateUserInfo,
+  storage,
+} from 'services/firebase';
 import { AuthContext } from 'App';
 import googleIcon from 'assets/images/icons/google.png';
 
@@ -22,7 +26,10 @@ const SignUp = () => {
   const avatarInputRef = useRef<HTMLInputElement | null>(null);
   const { auth, setAuth } = useContext(AuthContext);
   const [emailVal, setEmail, removeEmail] = useStorage<string>('email', '');
-  const [passwordVal, setPassword, removePassword] = useStorage<string>('password', '');
+  const [passwordVal, setPassword, removePassword] = useStorage<string>(
+    'password',
+    ''
+  );
 
   const { t } = useTranslation();
   const navigate = useNavigate();
@@ -46,13 +53,18 @@ const SignUp = () => {
     mode: 'onChange',
   });
 
-  const handleSignUp = async (data: TsignUpForm & { rememberCheck: boolean }) => {
+  const handleSignUp = async (
+    data: TsignUpForm & { rememberCheck: boolean }
+  ) => {
     firstLoad.current = false;
     const { firstName, lastName, email, password, rememberCheck } = data;
     let photoURL = '';
     setIsLoading(true);
     if (avatarImg) {
-      const imgRef = ref(storage, `user-avatar/${avatarImg.name}_${Date.now()}`);
+      const imgRef = ref(
+        storage,
+        `user-avatar/${avatarImg.name}_${Date.now()}`
+      );
       await uploadBytes(imgRef, avatarImg);
       photoURL = await getDownloadURL(imgRef);
     }
@@ -64,7 +76,13 @@ const SignUp = () => {
       removePassword();
     }
     try {
-      const user = await signUpAndUpdateUserInfo({ firstName, lastName, email, password, photoURL });
+      const user = await signUpAndUpdateUserInfo({
+        firstName,
+        lastName,
+        email,
+        password,
+        photoURL,
+      });
       setAuth(user);
       navigate('/');
     } catch (error) {
@@ -106,7 +124,9 @@ const SignUp = () => {
           <div className={styles.loginTitle}>{t('signUp.title')}</div>
           <small>For business, band or celebrity.</small>
         </div>
-        {signUpErrorMsg && <div className='text-center text-danger'>{signUpErrorMsg}</div>}
+        {signUpErrorMsg && (
+          <div className='text-center text-danger'>{signUpErrorMsg}</div>
+        )}
         <Form className={styles.loginForm}>
           <Row>
             <Col md={6}>
@@ -139,7 +159,9 @@ const SignUp = () => {
                     },
                   })}
                 />
-                {errors.email && <small className='text-danger'>{errors.email.message}</small>}
+                {errors.email && (
+                  <small className='text-danger'>{errors.email.message}</small>
+                )}
               </Form.Group>
             </Col>
             <Col md={6}>
@@ -166,13 +188,18 @@ const SignUp = () => {
                     },
                   })}
                 />
-                {errors.password && <small className='text-danger'>{errors.password.message}</small>}
+                {errors.password && (
+                  <small className='text-danger'>
+                    {errors.password.message}
+                  </small>
+                )}
               </Form.Group>
             </Col>
             <Col md={6}>
               <Form.Group className='mb-3'>
                 <Form.Label>
-                  {t('signUp.confirmPassword')} <span className='text-danger'>*</span>
+                  {t('signUp.confirmPassword')}{' '}
+                  <span className='text-danger'>*</span>
                 </Form.Label>
                 <Form.Control
                   type='password'
@@ -180,11 +207,18 @@ const SignUp = () => {
                   {...register('confirmPassword', {
                     required: true,
                     validate: (val) => {
-                      return val === watch('password') || t('errorMsg.confirmPassword');
+                      return (
+                        val === watch('password') ||
+                        t('errorMsg.confirmPassword')
+                      );
                     },
                   })}
                 />
-                {errors.confirmPassword && <small className='text-danger'>{errors.confirmPassword.message}</small>}
+                {errors.confirmPassword && (
+                  <small className='text-danger'>
+                    {errors.confirmPassword.message}
+                  </small>
+                )}
               </Form.Group>
             </Col>
           </Row>
@@ -197,19 +231,29 @@ const SignUp = () => {
                 accept='image/*'
                 onChange={(event) => handleSetAvatarImg(event)}
               />
-              <Button onClick={() => avatarInputRef.current?.click()}>{t('signUp.uploadAvatarImg')}</Button>
+              <Button onClick={() => avatarInputRef.current?.click()}>
+                {t('signUp.uploadAvatarImg')}
+              </Button>
             </Col>
             {avatarImg && (
               <Col>
-                <img src={URL.createObjectURL(avatarImg)} alt={avatarImg.name} className={styles.previewAvatar} />
+                <img
+                  src={URL.createObjectURL(avatarImg)}
+                  alt={avatarImg.name}
+                  className={styles.previewAvatar}
+                />
               </Col>
             )}
           </Row>
           <div className='d-flex justify-content-between'>
             <Form.Group className='mb-3' controlId='rememberCheckbox'>
-              <Form.Check type='checkbox' {...register('rememberCheck')} label={t('login.remamberMe')} />
+              <Form.Check
+                type='checkbox'
+                {...register('rememberCheck')}
+                label={t('login.remamberMe')}
+              />
             </Form.Group>
-            <a href='#' className='text-primary'>
+            <a href='https://www.google.com/' className='text-primary'>
               {t('login.forgotPassword')}?
             </a>
           </div>
@@ -220,11 +264,17 @@ const SignUp = () => {
               label={
                 <span>
                   I agree to all the{' '}
-                  <a href='#' target='_blank' rel='noopener noreferrer'>
+                  <a
+                    href='https://www.google.com/'
+                    target='_blank'
+                    rel='noopener noreferrer'>
                     Terms
                   </a>{' '}
                   and{' '}
-                  <a href='#' target='_blank' rel='noopener noreferrer'>
+                  <a
+                    href='https://www.google.com/'
+                    target='_blank'
+                    rel='noopener noreferrer'>
                     Privacy policy
                   </a>
                 </span>
@@ -232,11 +282,18 @@ const SignUp = () => {
             />
           </Form.Group>
           <div className={styles.actionBtns}>
-            <Button onClick={handleSubmit(handleSignUp)} disabled={!isValid || isLoading}>
+            <Button
+              onClick={handleSubmit(handleSignUp)}
+              disabled={!isValid || isLoading}>
               {t('signUp.title')}
-              {isLoading && <Spinner animation='border' size='sm' className='ms-3' />}
+              {isLoading && (
+                <Spinner animation='border' size='sm' className='ms-3' />
+              )}
             </Button>
-            <Button variant='secondary' onClick={handleSignInWithGoogle} disabled={isLoading}>
+            <Button
+              variant='secondary'
+              onClick={handleSignInWithGoogle}
+              disabled={isLoading}>
               <img src={googleIcon} alt='google-icon' className='me-2' />
               {t('login.google')}
             </Button>

@@ -36,10 +36,10 @@ const Layout = ({ children }: { children: React.ReactElement }) => {
         </div>
         {children}
         <div className={styles.appLink}>
-          <a href='#'>
+          <a href='https://www.google.com/'>
             <AppStore />
           </a>
-          <a href='#'>
+          <a href='https://www.google.com/'>
             <GooglePlay />
           </a>
         </div>

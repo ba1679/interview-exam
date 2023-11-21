@@ -18,7 +18,10 @@ const Login = () => {
   const [loginErrorMsg, setLoginErrorMsg] = useState<string | null>(null);
   const { auth } = useContext(AuthContext);
   const [emailVal, setEmail, removeEmail] = useStorage<string>('email', '');
-  const [passwordVal, setPassword, removePassword] = useStorage<string>('password', '');
+  const [passwordVal, setPassword, removePassword] = useStorage<string>(
+    'password',
+    ''
+  );
 
   const { t } = useTranslation();
   const navigate = useNavigate();
@@ -84,7 +87,9 @@ const Login = () => {
           <div className={styles.loginTitle}>{t('login.title')}</div>
           <small>For business, band or celebrity.</small>
         </div>
-        {loginErrorMsg && <div className='text-center text-danger'>{loginErrorMsg}</div>}
+        {loginErrorMsg && (
+          <div className='text-center text-danger'>{loginErrorMsg}</div>
+        )}
         <Form className={styles.loginForm}>
           <Form.Group className='mb-3'>
             <Form.Label>{t('common.email')}</Form.Label>
@@ -113,25 +118,37 @@ const Login = () => {
           </Form.Group>
           <div className='d-flex justify-content-between'>
             <Form.Group className='mb-3' controlId='checkbox'>
-              <Form.Check type='checkbox' label={t('login.remamberMe')} {...register('check')} />
+              <Form.Check
+                type='checkbox'
+                label={t('login.remamberMe')}
+                {...register('check')}
+              />
             </Form.Group>
-            <a href='#' className='text-primary'>
+            <a href='https://www.google.com/' className='text-primary'>
               {t('login.forgotPassword')}?
             </a>
           </div>
           <div className={styles.actionBtns}>
-            <Button onClick={handleSubmit(handleLogin)} disabled={!isValid || isLoading}>
+            <Button
+              onClick={handleSubmit(handleLogin)}
+              disabled={!isValid || isLoading}>
               {t('login.title')}
-              {isLoading && <Spinner animation='border' size='sm' className='ms-3' />}
+              {isLoading && (
+                <Spinner animation='border' size='sm' className='ms-3' />
+              )}
             </Button>
-            <Button variant='secondary' onClick={handleSignInWithGoogle} disabled={isLoading}>
+            <Button
+              variant='secondary'
+              onClick={handleSignInWithGoogle}
+              disabled={isLoading}>
               <img src={googleIcon} alt='google-icon' className='me-2' />
               {t('login.google')}
             </Button>
           </div>
         </Form>
         <div className='text-center mt-4 mt-xl-5'>
-          {t('login.dontHaveAccount')} <Link to='/sign-up'> {t('signUp.title')}</Link>
+          {t('login.dontHaveAccount')}{' '}
+          <Link to='/sign-up'> {t('signUp.title')}</Link>
         </div>
       </div>
     </Layout>
