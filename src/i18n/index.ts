@@ -19,7 +19,7 @@ i18n
       useSuspense: false,
     },
     backend: {
-      loadPath: '/interview-exam/locales/{{lng}}/translation.json',
+      loadPath: '/react-firebase-auth/locales/{{lng}}/translation.json',
     },
   });
 
