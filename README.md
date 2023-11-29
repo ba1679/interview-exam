@@ -1,5 +1,5 @@
 # This is a simple project contains login & register feature
-Demo: [https://ba1679.github.io/interview-exam/](https://ba1679.github.io/interview-exam/)
+Demo: [https://ba1679.github.io/react-firebase-auth/](https://ba1679.github.io/react-firebase-auth/)
 
 
 # Getting Started with Create React App
